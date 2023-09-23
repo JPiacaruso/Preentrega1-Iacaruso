@@ -1,19 +1,13 @@
-import { Navbar } from "./Navbar";
-import { Footer } from "./Footer";
-import { Home } from "./Home";
+import { Navbar } from "./components/layaout/navbar/Navbar";
+import { Home } from "./components/pages/home/Home";
+import { Login } from "./components/pages/login/Login";
 
 function App() {
-  let nombre = "pepitopopin";
-
-  const sumar = () => {
-    console.log("Estoy sumando");
-  };
-
   return (
     <div>
       <Navbar />
       <Home />
-      <Footer />
+      <Login />
     </div>
   );
 }
