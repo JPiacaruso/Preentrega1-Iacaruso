@@ -1,9 +1,10 @@
 import { CartWidget } from "../../common/cartwidget/CartWidget";
 
-export const Navbar = () => {
+const Navbar = () => {
   return (
     <div>
-      <nav>
+      <CartWidget />
+      {/* <nav>
         <h3>Logo</h3>
         <ul>
           <li>Todos los productos</li>
@@ -11,9 +12,10 @@ export const Navbar = () => {
           <li>Basicas y Lisas</li>
           <li>Estampadas</li>
         </ul>
-      </nav>
+      </nav> */}
       {/* WIDGET CARRITO */}
-      <CartWidget />
     </div>
   );
 };
+
+export default Navbar;
