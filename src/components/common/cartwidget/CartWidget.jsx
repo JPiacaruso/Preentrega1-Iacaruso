@@ -1,13 +1,15 @@
-import { TiShoppingCart } from "react-icons/ti";
+import { FaShoppingCart } from "react-icons/fa";
 import "./CartWidget.css";
 
 export const CartWidget = () => {
   return (
     <div className="cartwidget">
       <div>
-        <TiShoppingCart />
+        <FaShoppingCart />
         <span>2</span>
       </div>
     </div>
   );
 };
+
+export default CartWidget;

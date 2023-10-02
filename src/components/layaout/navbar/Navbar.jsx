@@ -1,19 +1,16 @@
-import { CartWidget } from "../../common/cartwidget/CartWidget";
+import CartWidget from "../../common/cartwidget/CartWidget";
 
 const Navbar = () => {
   return (
     <div>
+      <h4>Logo</h4>
+      <ul>
+        <li>Ceramicas de autor</li>
+        <li>Cerámicas Lisas</li>
+        <li>Accesorios</li>
+      </ul>
+      {/* widget Carrito */}
       <CartWidget />
-      {/* <nav>
-        <h3>Logo</h3>
-        <ul>
-          <li>Todos los productos</li>
-          <li>De autor</li>
-          <li>Basicas y Lisas</li>
-          <li>Estampadas</li>
-        </ul>
-      </nav> */}
-      {/* WIDGET CARRITO */}
     </div>
   );
 };

@@ -1,17 +1,17 @@
 import { useState } from "react";
 
-export const Login = () => {
-  // const [nombre, setNuevoNombre] = useState("pepe");
-
-  // console.log("Se renderiza");
-
-  // const cambiarNombre = () => {
-  //   setNuevoNombre("juan");
+const Login = () => {
+  const [nombre, setNombre] = useState("pepe");
+  const cambiarNombre = () => {
+    setNombre("juan");
+  };
 
   return (
     <div>
-      {/* <h2>{nombre}</h2>
-      <button onClick={cambiarNombre}>Cambiar Nombre</button> */}
+      <h4>{nombre}</h4>
+      <button onClick={cambiarNombre}>Cambiar Nombre</button>
     </div>
   );
 };
+
+export default Login;

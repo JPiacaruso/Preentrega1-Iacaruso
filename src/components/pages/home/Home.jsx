@@ -2,24 +2,22 @@ import { useState } from "react";
 
 export const Home = () => {
   const [counter, setCounter] = useState(0);
-
-  let [darkMode, setDarkmode] = useState(false);
-
-  console.log("Hola");
+  const [darkMode, setDarkMode] = useState(false);
 
   const switchMode = () => {
-    setDarkmode(!darkMode);
+    setDarkMode(!darkMode);
   };
 
   const sumar = () => {
     setCounter(counter + 1);
   };
-
   return (
     <div>
       <h4>{counter}</h4>
       <button onClick={sumar}>Sumar</button>
-      <button onClick={switchMode}>Cambiar Modo</button>
+      <button onClick={switchMode}>Cambiar modo</button>
     </div>
   );
 };
+
+export default Home;

@@ -1,22 +1,19 @@
-import { CartWidget } from "./components/common/cartwidget/CartWidget";
-import Footer from "./components/layaout/footer/Footer";
-// import Navbar from "./components/layaout/navbar/Navbar";  (Mas adelante tal vez haga de 0 el Navbar)
-// import { Home } from "./components/pages/home/Home";
-import ItemListContainer from "./components/pages/itemListContainer/itemListContainer";
-// import { Login } from "./components/pages/login/Login";
-import ResponsiveAppBar from "./components/pages/materialUI/ResponsiveAppBar";
+import Navbar from "./components/layaout/navbar/Navbar";
+import { Home } from "./components/pages/home/Home";
+import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer";
+import Login from "./components/pages/login/Login";
+import MaterialUi from "./components/pages/materialUI/MaterialUi";
 
 function App() {
-  let saludo = "Hola Juan Carlos, como estás hoy?";
+  let saludo = "juancito";
 
   return (
     <div>
-      <ResponsiveAppBar />
-      <ItemListContainer saludo={saludo} />
-      <CartWidget />
-      {/* <Home />
-      <Login /> */}
-      <Footer />
+      <Home />
+      <Login />
+      <Navbar />
+      <MaterialUi />
+      <ItemListContainer x={saludo} edad={12} />
     </div>
   );
 }

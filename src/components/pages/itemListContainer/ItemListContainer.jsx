@@ -1,8 +1,8 @@
-import "./ItemListContainer.css";
-const ItemListContainer = ({ saludo }) => {
+const ItemListContainer = ({ saludo, edad }) => {
   return (
     <div>
-      <h4 className="itemList">{saludo}</h4>
+      <h4>Cuantos años? {edad}</h4>
+      <h5>Hola {saludo} como estás!</h5>
     </div>
   );
 };
