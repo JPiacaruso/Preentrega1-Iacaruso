@@ -1,12 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import CounterPresentacional from "./counterPresentacional";
 
-const CounterContainer = () => {
-  const [contador, setContador] = useState(0);
-
-  const stock = 5;
+const CounterContainer = ({ stock }) => {
+  const [contador, setContador] = useState(1);
+  const [nombre, setNombre] = useState("pepito");
 
   const sumar = () => {
-    if (setContador < stock) {
+    if (contador < stock) {
       setContador(contador + 1);
     } else {
       alert("Cantidad Máxima");
@@ -18,12 +18,21 @@ const CounterContainer = () => {
       setContador(contador - 1);
     }
   };
+  console.log("me monte o actualize");
+
+  useEffect(() => {
+    console.log("Se realizo una peticion");
+  }, [nombre]);
+
   return (
-    <div>
-      <button onClick={sumar}>Sumar</button>
-      <button>{contador}</button>
-      <button onClick={restar}>Restar</button>
-    </div>
+    <CounterPresentacional
+      sumar={sumar}
+      restar={restar}
+      contador={contador}
+      nombre={nombre}
+      setNombre={setNombre}
+    />
   );
 };
+
 export default CounterContainer;
