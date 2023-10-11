@@ -8,21 +8,25 @@ import MaterialUi from "./components/pages/materialUI/MaterialUi";
 import PruebaResponsive from "./components/pages/pruebaResponsive/PruebaResponsive";
 import CounterContainer from "./components/common/counter/CounterContainer";
 import { useState } from "react";
+import ItemDetailContainer from "./components/pages/itemDetailContainer/ItemDetailContainer";
+import { FetchUno } from "./components/fetching/FetchUno";
+import FetchDos from "./components/fetching/FetchDos";
+import { FetchTres } from "./components/fetching/FetchTres";
 
 function App() {
-  const [montar, setMontar] = useState(false);
-
   return (
     <>
       {/* <ThemeProvider theme={customTheme}>
         <PruebaResponsive />
-      </ThemeProvider>
-      <Home />
-      <Login /> */}
+      </ThemeProvider> */}
+      {/* <Home /> */}
+      {/* <Login /> */}
       <Navbar />
       <ItemListContainer />
-      <CounterContainer stock={5} />
-      {/* <MaterialUi /> */}
+      <ItemDetailContainer />
+      <CounterContainer />
+      <MaterialUi />
+      {/* <FetchUno /> */}
     </>
   );
 }

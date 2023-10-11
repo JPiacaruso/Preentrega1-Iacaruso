@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import CounterPresentacional from "./counterPresentacional";
 
-const CounterContainer = ({ stock }) => {
+const CounterContainer = ({ stock, onAdd }) => {
   const [contador, setContador] = useState(1);
   const [nombre, setNombre] = useState("pepito");
 
@@ -18,11 +18,6 @@ const CounterContainer = ({ stock }) => {
       setContador(contador - 1);
     }
   };
-  console.log("me monte o actualize");
-
-  useEffect(() => {
-    console.log("Se realizo una peticion");
-  }, [nombre]);
 
   return (
     <CounterPresentacional
@@ -31,6 +26,7 @@ const CounterContainer = ({ stock }) => {
       contador={contador}
       nombre={nombre}
       setNombre={setNombre}
+      onAdd={onAdd}
     />
   );
 };
